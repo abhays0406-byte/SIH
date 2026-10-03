@@ -1,0 +1,60 @@
+profile: default
+description: Default GeM procurement compliance rules
+
+knockout_rules:
+  - check: debarment_check
+    condition: status == "fail"
+    reason: "Bidder is debarred/blacklisted — automatic disqualification"
+
+  - check: pan_verification
+    condition: status == "fail"
+    reason: "PAN is inactive or invalid — mandatory requirement"
+
+weighted_checks:
+  - check: debarment_check
+    weight: 20
+    mandatory: true
+  - check: pan_verification
+    weight: 15
+    mandatory: true
+  - check: gstn_verification
+    weight: 12
+    mandatory: true
+  - check: mca21_company_status
+    weight: 10
+    mandatory: false
+  - check: epfo_compliance
+    weight: 8
+    mandatory: false
+  - check: esic_compliance
+    weight: 6
+    mandatory: false
+  - check: udyam_registration
+    weight: 8
+    mandatory: false
+  - check: make_in_india_class
+    weight: 8
+    mandatory: false
+  - check: bis_certification
+    weight: 5
+    mandatory: false
+  - check: nsic_registration
+    weight: 3
+    mandatory: false
+  - check: startup_india_recognition
+    weight: 2
+    mandatory: false
+  - check: digilocker_documents
+    weight: 3
+    mandatory: false
+
+msme_relaxations:
+  enabled: true
+  categories: [micro, small]
+  relaxed_checks: [nsic_registration, bis_certification]
+  score_bonus: 5
+
+local_supplier:
+  class_i_threshold: 50
+  class_ii_threshold: 20
+  preference_order: [Class-I, Class-II, Non-Local]

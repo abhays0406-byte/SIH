@@ -1,0 +1,53 @@
+profile: mopng_cpse
+description: MoPNG/CPSE specific rules with OEM and BIS mandatory requirements
+extends: default
+
+knockout_rules:
+  - check: debarment_check
+    condition: status == "fail"
+    reason: "Debarred entity — automatic disqualification"
+  - check: bis_certification
+    condition: status != "pass"
+    reason: "BIS certification mandatory for MoPNG/CPSE tenders"
+
+weighted_checks:
+  - check: debarment_check
+    weight: 20
+    mandatory: true
+  - check: pan_verification
+    weight: 12
+    mandatory: true
+  - check: gstn_verification
+    weight: 10
+    mandatory: true
+  - check: bis_certification
+    weight: 15
+    mandatory: true
+  - check: make_in_india_class
+    weight: 12
+    mandatory: true
+  - check: mca21_company_status
+    weight: 8
+    mandatory: false
+  - check: epfo_compliance
+    weight: 7
+    mandatory: false
+  - check: esic_compliance
+    weight: 5
+    mandatory: false
+  - check: udyam_registration
+    weight: 5
+    mandatory: false
+  - check: nsic_registration
+    weight: 3
+    mandatory: false
+  - check: startup_india_recognition
+    weight: 2
+    mandatory: false
+  - check: digilocker_documents
+    weight: 1
+    mandatory: false
+
+oem_validity:
+  required: true
+  min_validity_months: 12

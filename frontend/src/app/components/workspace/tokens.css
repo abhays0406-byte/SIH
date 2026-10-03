@@ -1,0 +1,62 @@
+/* ════════════════════════════════════════════════════════════════
+   BIDSENTINEL · DESIGN TOKENS
+   Civic instrument set — paper, ink, rule. No glass. No glow.
+   ════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Core (specified) ─────────────────────────────────────────── */
+  --paper: #F4F2EC;
+  --card:  #FFFFFF;
+  --rule:  #E1DCCF;
+  --ink:   #0B1B33;
+
+  /* ── Ink ramps ──────────────────────────────────────────────── */
+  --ink-90: #14263F;
+  --ink-70: #33455C;
+  --ink-50: #55657A;
+  --ink-35: #7C8999;
+  --ink-25: #9AA5B2;
+  --ink-20: #B4BCA6;
+
+  /* ── Authority navy ─────────────────────────────────────────── */
+  --navy:      #1A3A6B;
+  --navy-dk:   #0F2A52;
+  --navy-ink:  #0F2444;
+  --navy-tint: #EDF1F8;
+  --navy-rule: #B7C6DE;
+
+  /* ── Status ─────────────────────────────────────────────────── */
+  --pass:      #0D5C2E;
+  --pass-deep: #0A4321;
+  --pass-bg:   #E7F2EA;
+  --pass-rule: #AFCBB2;
+
+  --warn:      #7A4A00;
+  --warn-bg:   #FBF1DC;
+  --warn-rule: #E2C27F;
+
+  --fail:      #8C2020;
+  --fail-bg:   #FAECE7;
+  --fail-rule: #DAA9A0;
+
+  --na-ink:    #55657A;
+  --na-bg:     #EFEDE6;
+  --na-rule:   #C6C0B4;
+
+  /* ── Surfaces ──────────────────────────────────────────────── */
+  --band: #E9E5DA;
+  --sh:    0 1px 1px rgba(11,27,51,0.05), 0 1px 2px rgba(11,27,51,0.04);
+  --sh-md: 0 8px 18px rgba(11,27,51,0.10), 0 2px 5px rgba(11,27,51,0.06);
+  --sh-lg: 0 20px 52px rgba(11,27,51,0.20), 0 6px 14px rgba(11,27,51,0.08);
+  --sh-top: 0 -1px 0 rgba(11,27,51,0.06);
+
+  /* ── Type ─────────────────────────────────────────────────── */
+  --sans:  "Inter", "Helvetica Neue", "Segoe UI", system-ui, Arial, sans-serif;
+  --serif: "Palatino Linotype", Palatino, "Iowan Old Style", "Book Antiqua", Georgia, "Times New Roman", serif;
+  --mono:  "JetBrains Mono", "Cascadia Code", "SF Mono", Consolas, "Courier New", monospace;
+
+  /* ── Geometry ───────────────────────────────────────────────── */
+  --r:    2px;
+  --r-md: 3px;
+  --r-lg: 5px;
+}

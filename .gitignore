@@ -1,0 +1,68 @@
+# ── Dependencies ──────────────────────────────────────────────
+node_modules/
+.pnp
+.pnp.js
+
+# ── Build output ──────────────────────────────────────────────
+.next/
+out/
+build/
+dist/
+*.tsbuildinfo
+next-env.d.ts
+
+# ── Python ────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ── Environment / secrets ─────────────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ── Local databases and runtime data ──────────────────────────
+*.db
+*.sqlite
+*.sqlite3
+uploads/
+tmp/
+temp/
+logs/
+
+# ── Logs ──────────────────────────────────────────────────────
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ── Test / coverage ───────────────────────────────────────────
+coverage/
+.pytest_cache/
+
+# ── Editors and OS ────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Docker / misc ─────────────────────────────────────────────
+docker-compose.override.yml
+docker-compose.dev.yml
+
+# ── Archives ──────────────────────────────────────────────────
+*.zip
+*.tar.gz
